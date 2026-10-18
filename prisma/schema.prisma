@@ -1,0 +1,199 @@
+// Prisma schema for DOGMAI Quiz
+// Using Turso (libSQL) for production database
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// Topics/Categories (HTML, CSS, JavaScript, etc.)
+model Topic {
+  id          String     @id @default(cuid())
+  name        String     @unique
+  slug        String     @unique
+  description String?
+  icon        String?    // Lucide icon name
+  color       String?    // Tailwind color class
+  order       Int        @default(0)
+  isActive    Boolean    @default(true)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  questions   Question[]
+
+  @@map("topics")
+}
+
+// Game Types (flip-match, multiple-choice, etc.)
+model GameType {
+  id          String       @id @default(cuid())
+  slug        String       @unique
+  name        String
+  description String?
+  icon        String?      // Lucide icon name
+  component   String       // React component name
+  category    String       // memory, quiz, speed, coding
+  isActive    Boolean      @default(true)
+  order       Int          @default(0)
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+  gameSessions GameSession[]
+
+  @@map("game_types")
+}
+
+// Questions - core content
+model Question {
+  id           String       @id @default(cuid())
+  topicId      String
+  topic        Topic        @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  difficulty   String       @default("beginner") // beginner, intermediate, advanced
+  type         String       @default("pair") // pair, multiple-choice, true-false, code-output, fill-blank, sequence
+
+  // For pair/flashcard type questions
+  front        String?      // Question text
+  back         String?      // Answer text
+
+  // For multiple choice
+  question     String?
+  options      String?      // JSON array of options
+  correctIndex Int?
+
+  // For true/false
+  statement    String?
+  isTrue       Boolean?
+
+  // For code questions
+  code         String?
+  output       String?
+
+  // For fill-in-the-blank
+  sentence     String?      // Sentence with ___ for blank
+  blankAnswer  String?
+
+  // For sequence questions
+  sequenceItems String?     // JSON array of items to order
+  correctOrder  String?     // JSON array of correct indices
+
+  explanation  String?      // Optional explanation for the answer
+  hint         String?
+  tags         String?      // JSON array of tags
+  isActive     Boolean      @default(true)
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+
+  @@index([topicId, difficulty, type])
+  @@map("questions")
+}
+
+// User profiles with authentication
+model User {
+  id            String        @id @default(cuid())
+  email         String?       @unique
+  username      String        @unique
+  displayName   String?
+  avatarUrl     String?
+  passwordHash  String?       // Hashed password for auth
+  role          String        @default("player") // player, admin
+  isActive      Boolean       @default(true)
+  lastLoginAt   DateTime?
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+  gameSessions  GameSession[]
+  achievements  UserAchievement[]
+  stats         UserStats?
+
+  @@map("users")
+}
+
+// User statistics aggregate
+model UserStats {
+  id            String   @id @default(cuid())
+  userId        String   @unique
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  totalGames    Int      @default(0)
+  totalScore    Int      @default(0)
+  totalTime     Int      @default(0) // in seconds
+  gamesWon      Int      @default(0)
+  currentStreak Int      @default(0)
+  bestStreak    Int      @default(0)
+  lastPlayedAt  DateTime?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("user_stats")
+}
+
+// Individual game sessions/results
+model GameSession {
+  id           String   @id @default(cuid())
+  userId       String?
+  user         User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  gameTypeId   String
+  gameType     GameType @relation(fields: [gameTypeId], references: [id])
+  topicSlug    String
+  difficulty   String
+  score        Int
+  maxScore     Int
+  percentage   Float
+  timeElapsed  Int      // in seconds
+  moves        Int?     // for games that track moves
+  correctCount Int?
+  totalCount   Int?
+  isCompleted  Boolean  @default(true)
+  createdAt    DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@index([gameTypeId])
+  @@map("game_sessions")
+}
+
+// Achievements definitions
+model Achievement {
+  id          String            @id @default(cuid())
+  slug        String            @unique
+  name        String
+  description String
+  icon        String?
+  category    String            // streak, score, games, mastery
+  requirement Int               // threshold to unlock
+  rarity      String            @default("common") // common, rare, epic, legendary
+  isActive    Boolean           @default(true)
+  createdAt   DateTime          @default(now())
+  users       UserAchievement[]
+
+  @@map("achievements")
+}
+
+// User achievements (many-to-many)
+model UserAchievement {
+  id            String      @id @default(cuid())
+  userId        String
+  user          User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievementId String
+  achievement   Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+  unlockedAt    DateTime    @default(now())
+
+  @@unique([userId, achievementId])
+  @@map("user_achievements")
+}
+
+// Leaderboard entries (denormalized for performance)
+model LeaderboardEntry {
+  id         String   @id @default(cuid())
+  period     String   // daily, weekly, monthly, all-time
+  gameSlug   String?  // null for overall leaderboard
+  topicSlug  String?  // null for all topics
+  username   String
+  userId     String?
+  score      Int
+  rank       Int?
+  createdAt  DateTime @default(now())
+  periodDate String   // e.g., "2024-01-15" for daily, "2024-W03" for weekly
+
+  @@index([period, periodDate, score])
+  @@map("leaderboard_entries")
+}

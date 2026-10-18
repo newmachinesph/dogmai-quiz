@@ -1,0 +1,464 @@
+[
+  {
+    "category": "HTML",
+    "difficulty": "beginner",
+    "pairs": [
+      { "front": "<html>", "back": "Root Element" },
+      { "front": "<head>", "back": "Document Metadata" },
+      { "front": "<body>", "back": "Page Content" },
+      { "front": "<div>", "back": "Division Container" },
+      { "front": "<p>", "back": "Paragraph" },
+      { "front": "<a href>", "back": "Hyperlink" },
+      { "front": "<img src>", "back": "Image Element" },
+      { "front": "<h1>", "back": "Main Heading" }
+    ]
+  },
+  {
+    "category": "HTML",
+    "difficulty": "intermediate",
+    "pairs": [
+      { "front": "<form>", "back": "Input Container" },
+      { "front": "<input type='text'>", "back": "Text Field" },
+      { "front": "<button>", "back": "Clickable Button" },
+      { "front": "<table>", "back": "Data Table" },
+      { "front": "<ul>", "back": "Unordered List" },
+      { "front": "<ol>", "back": "Ordered List" },
+      { "front": "<nav>", "back": "Navigation Section" },
+      { "front": "<header>", "back": "Page Header" }
+    ]
+  },
+  {
+    "category": "HTML",
+    "difficulty": "advanced",
+    "pairs": [
+      { "front": "<template>", "back": "Reusable Fragment" },
+      { "front": "<slot>", "back": "Content Placeholder" },
+      { "front": "data-*", "back": "Custom Attribute" },
+      { "front": "<canvas>", "back": "Graphics Drawing" },
+      { "front": "<svg>", "back": "Vector Graphics" },
+      { "front": "aria-label", "back": "Accessibility Label" },
+      { "front": "<dialog>", "back": "Modal Dialog" },
+      { "front": "<details>", "back": "Expandable Content" }
+    ]
+  },
+  {
+    "category": "CSS",
+    "difficulty": "beginner",
+    "pairs": [
+      { "front": "color:", "back": "Text Color" },
+      { "front": "background:", "back": "Background Style" },
+      { "front": "font-size:", "back": "Text Size" },
+      { "front": "margin:", "back": "Outer Spacing" },
+      { "front": "padding:", "back": "Inner Spacing" },
+      { "front": "border:", "back": "Element Border" },
+      { "front": "width:", "back": "Element Width" },
+      { "front": "height:", "back": "Element Height" }
+    ]
+  },
+  {
+    "category": "CSS",
+    "difficulty": "intermediate",
+    "pairs": [
+      { "front": "display: flex", "back": "Flexbox Layout" },
+      { "front": "display: grid", "back": "Grid Layout" },
+      { "front": "position: absolute", "back": "Remove from Flow" },
+      { "front": "position: relative", "back": "Offset from Normal" },
+      { "front": "z-index:", "back": "Stack Order" },
+      { "front": "transition:", "back": "Animate Changes" },
+      { "front": "transform:", "back": "Visual Transform" },
+      { "front": "@media", "back": "Responsive Query" }
+    ]
+  },
+  {
+    "category": "CSS",
+    "difficulty": "advanced",
+    "pairs": [
+      { "front": "grid-template-areas", "back": "Named Grid Zones" },
+      { "front": "::before", "back": "Generated Content" },
+      { "front": ":nth-child()", "back": "Position Selector" },
+      { "front": "var(--custom)", "back": "CSS Variable" },
+      { "front": "@keyframes", "back": "Animation Steps" },
+      { "front": "clip-path:", "back": "Element Mask" },
+      { "front": "backdrop-filter:", "back": "Background Effects" },
+      { "front": "container-type:", "back": "Container Query" }
+    ]
+  },
+  {
+    "category": "JavaScript",
+    "difficulty": "beginner",
+    "pairs": [
+      { "front": "let x = 5", "back": "Variable Declaration" },
+      { "front": "function add(a, b)", "back": "Function Definition" },
+      { "front": "Array.map()", "back": "Transform Array" },
+      { "front": "if (condition)", "back": "Conditional Statement" },
+      { "front": "for (let i = 0)", "back": "For Loop" },
+      { "front": "console.log()", "back": "Print to Console" },
+      { "front": "const PI = 3.14", "back": "Constant Declaration" },
+      { "front": "return value", "back": "Return Statement" }
+    ]
+  },
+  {
+    "category": "JavaScript",
+    "difficulty": "beginner",
+    "pairs": [
+      { "front": "typeof 'hello'", "back": "string" },
+      { "front": "typeof 42", "back": "number" },
+      { "front": "typeof true", "back": "boolean" },
+      { "front": "typeof undefined", "back": "undefined" },
+      { "front": "typeof null", "back": "object" },
+      { "front": "typeof []", "back": "object" },
+      { "front": "typeof {}", "back": "object" },
+      { "front": "typeof function(){}", "back": "function" }
+    ]
+  },
+  {
+    "category": "JavaScript",
+    "difficulty": "intermediate",
+    "pairs": [
+      { "front": "Promise.resolve()", "back": "Async Success" },
+      { "front": "Promise.reject()", "back": "Async Failure" },
+      { "front": "async/await", "back": "Async Syntax" },
+      { "front": ".then().catch()", "back": "Promise Chain" },
+      { "front": "fetch(url)", "back": "HTTP Request" },
+      { "front": "JSON.parse()", "back": "String to Object" },
+      { "front": "JSON.stringify()", "back": "Object to String" },
+      { "front": "setTimeout()", "back": "Delayed Execution" }
+    ]
+  },
+  {
+    "category": "JavaScript",
+    "difficulty": "intermediate",
+    "pairs": [
+      { "front": "[1,2,3].map(x => x*2)", "back": "[2,4,6]" },
+      { "front": "[1,2,3].filter(x => x>1)", "back": "[2,3]" },
+      { "front": "[1,2,3].reduce((a,b)=>a+b)", "back": "6" },
+      { "front": "[1,2].concat([3,4])", "back": "[1,2,3,4]" },
+      { "front": "[1,2,3].slice(1,2)", "back": "[2]" },
+      { "front": "[1,2,3].includes(2)", "back": "true" },
+      { "front": "[3,1,2].sort()", "back": "[1,2,3]" },
+      { "front": "[1,2,3].reverse()", "back": "[3,2,1]" }
+    ]
+  },
+  {
+    "category": "JavaScript",
+    "difficulty": "advanced",
+    "pairs": [
+      { "front": "Closure", "back": "Function + Scope" },
+      { "front": "Prototype", "back": "Object Inheritance" },
+      { "front": "this keyword", "back": "Context Reference" },
+      { "front": "Event Loop", "back": "Async Execution" },
+      { "front": "Hoisting", "back": "Declaration Moving" },
+      { "front": "Callback", "back": "Function Argument" },
+      { "front": "Spread Operator", "back": "... Syntax" },
+      { "front": "Destructuring", "back": "Extract Values" }
+    ]
+  },
+  {
+    "category": "Node",
+    "difficulty": "beginner",
+    "pairs": [
+      { "front": "require()", "back": "Import Module" },
+      { "front": "module.exports", "back": "Export Module" },
+      { "front": "npm install", "back": "Add Package" },
+      { "front": "package.json", "back": "Project Config" },
+      { "front": "node app.js", "back": "Run Script" },
+      { "front": "process.env", "back": "Environment Vars" },
+      { "front": "npm init", "back": "Create Project" },
+      { "front": "__dirname", "back": "Current Directory" }
+    ]
+  },
+  {
+    "category": "Node",
+    "difficulty": "intermediate",
+    "pairs": [
+      { "front": "fs.readFile()", "back": "Read File Async" },
+      { "front": "fs.writeFile()", "back": "Write File Async" },
+      { "front": "path.join()", "back": "Combine Paths" },
+      { "front": "http.createServer()", "back": "Create Server" },
+      { "front": "express()", "back": "Web Framework" },
+      { "front": "app.listen()", "back": "Start Server" },
+      { "front": "Buffer", "back": "Binary Data" },
+      { "front": "Stream", "back": "Data Flow" }
+    ]
+  },
+  {
+    "category": "Node",
+    "difficulty": "advanced",
+    "pairs": [
+      { "front": "cluster", "back": "Multi-Process" },
+      { "front": "worker_threads", "back": "Multi-Thread" },
+      { "front": "EventEmitter", "back": "Event System" },
+      { "front": "process.nextTick()", "back": "Queue Callback" },
+      { "front": "crypto", "back": "Encryption" },
+      { "front": "child_process", "back": "Spawn Process" },
+      { "front": "pm2", "back": "Process Manager" },
+      { "front": "libuv", "back": "Async I/O" }
+    ]
+  },
+  {
+    "category": "React",
+    "difficulty": "beginner",
+    "pairs": [
+      { "front": "useState()", "back": "State Hook" },
+      { "front": "useEffect()", "back": "Side Effect Hook" },
+      { "front": "JSX", "back": "JavaScript XML" },
+      { "front": "<Component />", "back": "Component Tag" },
+      { "front": "props", "back": "Component Props" },
+      { "front": "return (...)", "back": "Render JSX" },
+      { "front": "onClick={}", "back": "Event Handler" },
+      { "front": "className=", "back": "CSS Class" }
+    ]
+  },
+  {
+    "category": "React",
+    "difficulty": "beginner",
+    "pairs": [
+      { "front": "import React", "back": "Import Library" },
+      { "front": "export default", "back": "Export Component" },
+      { "front": "{variable}", "back": "JavaScript Expression" },
+      { "front": "map() in JSX", "back": "Render List" },
+      { "front": "key prop", "back": "List Item ID" },
+      { "front": "Fragment <>", "back": "Group Elements" },
+      { "front": "Conditional &&", "back": "Conditional Render" },
+      { "front": "? : operator", "back": "Ternary Render" }
+    ]
+  },
+  {
+    "category": "React",
+    "difficulty": "intermediate",
+    "pairs": [
+      { "front": "useContext()", "back": "Context Hook" },
+      { "front": "useRef()", "back": "Reference Hook" },
+      { "front": "useMemo()", "back": "Memoization Hook" },
+      { "front": "useCallback()", "back": "Callback Memoization" },
+      { "front": "useReducer()", "back": "Complex State Hook" },
+      { "front": "Custom Hook", "back": "Reusable Logic" },
+      { "front": "React.memo()", "back": "Component Memoization" },
+      { "front": "forwardRef()", "back": "Ref Forwarding" }
+    ]
+  },
+  {
+    "category": "React",
+    "difficulty": "intermediate",
+    "pairs": [
+      { "front": "useEffect(() => {}, [])", "back": "Run Once" },
+      { "front": "useEffect(() => {}, [dep])", "back": "Run on Change" },
+      { "front": "useEffect(() => {...return cleanup})", "back": "Cleanup Function" },
+      { "front": "useState(initialValue)", "back": "Initialize State" },
+      { "front": "setState(newValue)", "back": "Update State" },
+      { "front": "setState(prev => prev + 1)", "back": "Functional Update" },
+      { "front": "const [state, setState]", "back": "State Destructure" },
+      { "front": "props.children", "back": "Child Components" }
+    ]
+  },
+  {
+    "category": "React",
+    "difficulty": "advanced",
+    "pairs": [
+      { "front": "React.lazy()", "back": "Code Splitting" },
+      { "front": "Suspense", "back": "Loading Boundary" },
+      { "front": "ErrorBoundary", "back": "Error Handling" },
+      { "front": "Portal", "back": "Render Outside" },
+      { "front": "Server Component", "back": "Server Render" },
+      { "front": "Client Component", "back": "Client Render" },
+      { "front": "useTransition()", "back": "Concurrent Feature" },
+      { "front": "useDeferredValue()", "back": "Defer Update" }
+    ]
+  },
+  {
+    "category": "SQL",
+    "difficulty": "beginner",
+    "pairs": [
+      { "front": "SELECT *", "back": "Get All Columns" },
+      { "front": "FROM table", "back": "Specify Table" },
+      { "front": "WHERE condition", "back": "Filter Rows" },
+      { "front": "INSERT INTO", "back": "Add Row" },
+      { "front": "UPDATE table", "back": "Modify Rows" },
+      { "front": "DELETE FROM", "back": "Remove Rows" },
+      { "front": "ORDER BY", "back": "Sort Results" },
+      { "front": "LIMIT n", "back": "Restrict Count" }
+    ]
+  },
+  {
+    "category": "SQL",
+    "difficulty": "intermediate",
+    "pairs": [
+      { "front": "JOIN", "back": "Combine Tables" },
+      { "front": "LEFT JOIN", "back": "Include Left Nulls" },
+      { "front": "GROUP BY", "back": "Aggregate Rows" },
+      { "front": "HAVING", "back": "Filter Groups" },
+      { "front": "COUNT(*)", "back": "Count Rows" },
+      { "front": "SUM(column)", "back": "Total Values" },
+      { "front": "AVG(column)", "back": "Average Value" },
+      { "front": "DISTINCT", "back": "Unique Values" }
+    ]
+  },
+  {
+    "category": "SQL",
+    "difficulty": "advanced",
+    "pairs": [
+      { "front": "INDEX", "back": "Speed Up Queries" },
+      { "front": "TRANSACTION", "back": "Atomic Operations" },
+      { "front": "FOREIGN KEY", "back": "Table Relation" },
+      { "front": "SUBQUERY", "back": "Nested Query" },
+      { "front": "CTE", "back": "Common Table Expression" },
+      { "front": "WINDOW FUNCTION", "back": "Row Calculation" },
+      { "front": "EXPLAIN", "back": "Query Plan" },
+      { "front": "VACUUM", "back": "Reclaim Space" }
+    ]
+  },
+  {
+    "category": "PostgreSQL",
+    "difficulty": "beginner",
+    "pairs": [
+      { "front": "psql", "back": "CLI Client" },
+      { "front": "\\dt", "back": "List Tables" },
+      { "front": "\\d table", "back": "Describe Table" },
+      { "front": "CREATE TABLE", "back": "New Table" },
+      { "front": "DROP TABLE", "back": "Delete Table" },
+      { "front": "ALTER TABLE", "back": "Modify Table" },
+      { "front": "\\q", "back": "Quit psql" },
+      { "front": "\\c database", "back": "Connect DB" }
+    ]
+  },
+  {
+    "category": "PostgreSQL",
+    "difficulty": "intermediate",
+    "pairs": [
+      { "front": "SERIAL", "back": "Auto Increment" },
+      { "front": "UUID", "back": "Unique Identifier" },
+      { "front": "JSONB", "back": "Binary JSON" },
+      { "front": "ARRAY[]", "back": "Array Column" },
+      { "front": "pg_dump", "back": "Backup Database" },
+      { "front": "pg_restore", "back": "Restore Backup" },
+      { "front": "RETURNING *", "back": "Return Modified" },
+      { "front": "ON CONFLICT", "back": "Upsert Clause" }
+    ]
+  },
+  {
+    "category": "PostgreSQL",
+    "difficulty": "advanced",
+    "pairs": [
+      { "front": "EXPLAIN ANALYZE", "back": "Query Stats" },
+      { "front": "PARTITION BY", "back": "Table Partitioning" },
+      { "front": "TRIGGER", "back": "Auto Action" },
+      { "front": "FUNCTION", "back": "Stored Procedure" },
+      { "front": "MATERIALIZED VIEW", "back": "Cached Query" },
+      { "front": "LATERAL JOIN", "back": "Correlated Subquery" },
+      { "front": "LISTEN/NOTIFY", "back": "Pub/Sub System" },
+      { "front": "pg_stat_statements", "back": "Query Stats" }
+    ]
+  },
+  {
+    "category": "REST API",
+    "difficulty": "beginner",
+    "pairs": [
+      { "front": "GET", "back": "Read Resource" },
+      { "front": "POST", "back": "Create Resource" },
+      { "front": "PUT", "back": "Replace Resource" },
+      { "front": "DELETE", "back": "Remove Resource" },
+      { "front": "200 OK", "back": "Success Response" },
+      { "front": "404", "back": "Not Found" },
+      { "front": "JSON", "back": "Data Format" },
+      { "front": "endpoint", "back": "API URL" }
+    ]
+  },
+  {
+    "category": "REST API",
+    "difficulty": "intermediate",
+    "pairs": [
+      { "front": "PATCH", "back": "Partial Update" },
+      { "front": "201 Created", "back": "Resource Made" },
+      { "front": "401", "back": "Unauthorized" },
+      { "front": "403", "back": "Forbidden" },
+      { "front": "500", "back": "Server Error" },
+      { "front": "Authorization header", "back": "Auth Token" },
+      { "front": "Content-Type", "back": "Data Type Header" },
+      { "front": "query params", "back": "URL Parameters" }
+    ]
+  },
+  {
+    "category": "REST API",
+    "difficulty": "advanced",
+    "pairs": [
+      { "front": "HATEOAS", "back": "Hypermedia Links" },
+      { "front": "Rate Limiting", "back": "Request Throttle" },
+      { "front": "Pagination", "back": "Result Pages" },
+      { "front": "Idempotent", "back": "Same Result" },
+      { "front": "CORS", "back": "Cross-Origin" },
+      { "front": "OAuth 2.0", "back": "Auth Protocol" },
+      { "front": "JWT", "back": "JSON Web Token" },
+      { "front": "Webhook", "back": "Event Callback" }
+    ]
+  },
+  {
+    "category": "Git",
+    "difficulty": "beginner",
+    "pairs": [
+      { "front": "git init", "back": "Initialize Repo" },
+      { "front": "git add .", "back": "Stage Changes" },
+      { "front": "git commit -m", "back": "Commit Changes" },
+      { "front": "git status", "back": "Check Status" },
+      { "front": "git log", "back": "View History" },
+      { "front": "git push", "back": "Upload Changes" },
+      { "front": "git pull", "back": "Download Changes" },
+      { "front": "git clone", "back": "Copy Repository" }
+    ]
+  },
+  {
+    "category": "Git",
+    "difficulty": "beginner",
+    "pairs": [
+      { "front": "git branch", "back": "List Branches" },
+      { "front": "git branch name", "back": "Create Branch" },
+      { "front": "git checkout", "back": "Switch Branch" },
+      { "front": "git merge", "back": "Merge Branches" },
+      { "front": "git diff", "back": "Show Changes" },
+      { "front": "git rm", "back": "Remove File" },
+      { "front": "git mv", "back": "Move File" },
+      { "front": ".gitignore", "back": "Ignore Files" }
+    ]
+  },
+  {
+    "category": "Git",
+    "difficulty": "intermediate",
+    "pairs": [
+      { "front": "git rebase", "back": "Reapply Commits" },
+      { "front": "git stash", "back": "Save Changes" },
+      { "front": "git stash pop", "back": "Restore Changes" },
+      { "front": "git reset --hard", "back": "Undo Commits" },
+      { "front": "git cherry-pick", "back": "Copy Commit" },
+      { "front": "git fetch", "back": "Download Refs" },
+      { "front": "git remote -v", "back": "List Remotes" },
+      { "front": "git tag", "back": "Mark Version" }
+    ]
+  },
+  {
+    "category": "Git",
+    "difficulty": "intermediate",
+    "pairs": [
+      { "front": "origin", "back": "Default Remote" },
+      { "front": "HEAD", "back": "Current Commit" },
+      { "front": "main/master", "back": "Default Branch" },
+      { "front": "merge conflict", "back": "Conflicting Changes" },
+      { "front": "fast-forward", "back": "Simple Merge" },
+      { "front": "detached HEAD", "back": "No Branch State" },
+      { "front": "staging area", "back": "Index" },
+      { "front": "working directory", "back": "Local Files" }
+    ]
+  },
+  {
+    "category": "Git",
+    "difficulty": "advanced",
+    "pairs": [
+      { "front": "git reflog", "back": "Reference Log" },
+      { "front": "git bisect", "back": "Binary Search" },
+      { "front": "git submodule", "back": "Nested Repo" },
+      { "front": "git rebase -i", "back": "Interactive Rebase" },
+      { "front": "git filter-branch", "back": "Rewrite History" },
+      { "front": "git worktree", "back": "Multiple Checkouts" },
+      { "front": "git blame", "back": "Line Authors" },
+      { "front": "git hooks", "back": "Automation Scripts" }
+    ]
+  }
+]

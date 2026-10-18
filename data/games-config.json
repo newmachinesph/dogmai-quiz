@@ -1,0 +1,214 @@
+{
+  "games": [
+    {
+      "id": "flip-match",
+      "name": "Flip & Match",
+      "icon": "Gamepad2",
+      "description": "Memory card matching",
+      "component": "FlipMatchGame",
+      "enabled": true,
+      "category": "memory"
+    },
+    {
+      "id": "multiple-choice",
+      "name": "Multiple Choice",
+      "icon": "CircleDot",
+      "description": "Pick the right answer",
+      "component": "MultipleChoiceGame",
+      "enabled": true,
+      "category": "quiz"
+    },
+    {
+      "id": "true-false",
+      "name": "True or False",
+      "icon": "ToggleLeft",
+      "description": "Fact or fiction?",
+      "component": "TrueFalseGame",
+      "enabled": true,
+      "category": "quiz"
+    },
+    {
+      "id": "lightning-round",
+      "name": "Lightning Round",
+      "icon": "Zap",
+      "description": "Speed increases each level",
+      "component": "LightningRoundGame",
+      "enabled": true,
+      "category": "timed"
+    },
+    {
+      "id": "code-output",
+      "name": "Code Output",
+      "icon": "Code",
+      "description": "What does it mean?",
+      "component": "CodeOutputGame",
+      "enabled": true,
+      "category": "coding"
+    },
+    {
+      "id": "fill-blank",
+      "name": "Fill in Blank",
+      "icon": "Edit3",
+      "description": "Complete the term",
+      "component": "FillBlankGame",
+      "enabled": true,
+      "category": "typing"
+    },
+    {
+      "id": "sequence",
+      "name": "Sequence",
+      "icon": "List",
+      "description": "Order the items",
+      "component": "SequenceGame",
+      "enabled": true,
+      "category": "ordering"
+    },
+    {
+      "id": "typing-challenge",
+      "name": "Typing",
+      "icon": "Keyboard",
+      "description": "Type fast & accurate",
+      "component": "TypingChallengeGame",
+      "enabled": true,
+      "category": "typing"
+    },
+    {
+      "id": "hangman",
+      "name": "Hangman",
+      "icon": "Skull",
+      "description": "Guess the word",
+      "component": "HangmanGame",
+      "enabled": true,
+      "category": "word"
+    },
+    {
+      "id": "drag-drop",
+      "name": "Match Pairs",
+      "icon": "Move",
+      "description": "Connect terms",
+      "component": "DragDropGame",
+      "enabled": true,
+      "category": "matching"
+    },
+    {
+      "id": "word-scramble",
+      "name": "Word Scramble",
+      "icon": "Shuffle",
+      "description": "Unscramble terms",
+      "component": "WordScrambleGame",
+      "enabled": true,
+      "category": "word"
+    },
+    {
+      "id": "survival",
+      "name": "Survival",
+      "icon": "Heart",
+      "description": "Endless with lives",
+      "component": "SurvivalGame",
+      "enabled": true,
+      "category": "challenge"
+    },
+    {
+      "id": "code-debugger",
+      "name": "Code Debugger",
+      "icon": "Bug",
+      "description": "Find the bug",
+      "component": "CodeDebuggerGame",
+      "enabled": true,
+      "category": "coding"
+    },
+    {
+      "id": "hot-potato",
+      "name": "Hot Potato",
+      "icon": "Bomb",
+      "description": "Answer before it explodes!",
+      "component": "HotPotatoGame",
+      "enabled": true,
+      "category": "timed"
+    },
+    {
+      "id": "memory-chain",
+      "name": "Memory Chain",
+      "icon": "Brain",
+      "description": "Sequence memory",
+      "component": "MemoryChainGame",
+      "enabled": true,
+      "category": "memory"
+    },
+    {
+      "id": "whack-a-mole",
+      "name": "Whack-a-Mole",
+      "icon": "Target",
+      "description": "Tap correct answers fast!",
+      "component": "WhackAMoleGame",
+      "enabled": true,
+      "category": "reaction"
+    },
+    {
+      "id": "code-completion",
+      "name": "Code Complete",
+      "icon": "FileCode",
+      "description": "Fill in the code",
+      "component": "CodeCompletionGame",
+      "enabled": true,
+      "category": "coding"
+    },
+    {
+      "id": "first-letter",
+      "name": "First Letter",
+      "icon": "Eye",
+      "description": "Guess as letters reveal",
+      "component": "FirstLetterGame",
+      "enabled": true,
+      "category": "word"
+    },
+    {
+      "id": "avalanche",
+      "name": "Avalanche",
+      "icon": "Mountain",
+      "description": "Catch falling answers",
+      "component": "AvalancheGame",
+      "enabled": true,
+      "category": "reaction"
+    },
+    {
+      "id": "speed-quiz",
+      "name": "Speed Quiz",
+      "icon": "Clock",
+      "description": "Race against time",
+      "component": "SpeedQuizGame",
+      "enabled": false,
+      "category": "timed"
+    },
+    {
+      "id": "beat-the-clock",
+      "name": "Beat the Clock",
+      "icon": "Clock",
+      "description": "Time challenge",
+      "component": "BeatTheClockGame",
+      "enabled": false,
+      "category": "timed"
+    },
+    {
+      "id": "rapid-fire",
+      "name": "Rapid Fire",
+      "icon": "Flame",
+      "description": "Quick answers, big scores",
+      "component": "RapidFireGame",
+      "enabled": false,
+      "category": "timed"
+    }
+  ],
+  "categories": [
+    { "id": "memory", "name": "Memory Games" },
+    { "id": "quiz", "name": "Quiz Games" },
+    { "id": "timed", "name": "Timed Challenges" },
+    { "id": "reaction", "name": "Reaction Games" },
+    { "id": "coding", "name": "Coding Games" },
+    { "id": "typing", "name": "Typing Games" },
+    { "id": "word", "name": "Word Games" },
+    { "id": "ordering", "name": "Ordering Games" },
+    { "id": "matching", "name": "Matching Games" },
+    { "id": "challenge", "name": "Challenge Modes" }
+  ]
+}
